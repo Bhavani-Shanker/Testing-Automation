@@ -1,3 +1,4 @@
+Python==3.12.11
 streamlit==1.32.2
 requests==2.31.0
 sentence-transformers==2.2.2

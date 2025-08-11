@@ -5,6 +5,13 @@ import concurrent.futures
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import sys
+
+st.write(f"Running Python {sys.version}")
+if not sys.version_info.major == 3 and sys.version_info.minor == 10:
+    st.error("Warning: Not running Python 3.10!")
+else:
+    st.success("Running Python 3.10 as requested")
 
 # === Configuration ===
 TOGETHER_MODEL_LIST = [
@@ -407,4 +414,5 @@ def main():
         st.info("Reporting functionality coming soon!")
 
 if __name__ == "__main__":
+
     main()
